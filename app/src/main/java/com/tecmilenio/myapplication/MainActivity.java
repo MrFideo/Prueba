@@ -62,6 +62,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        borrar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view){
+
+                etNombre.setText("");
+                etEscuela.setText("");
+                etCarrera.setText("");
+                etMateria.setText("");
+
+                tvGuardaDatos.setVisibility(View.INVISIBLE);
+
+                textView.setText("");
+            }
+        });
+
 
     }
 }
