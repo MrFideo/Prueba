@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/*
+* David
+* */
 public class MainActivity extends AppCompatActivity {
 
     private EditText etNombre;
@@ -19,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText etMateria;
     private Button borrar;
     private Button guardar;
+    private TextView tvGuardaDatos;
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
         borrar=(Button) findViewById(R.id.borrar);
         guardar=(Button) findViewById(R.id.guardar);
 
+        tvGuardaDatos = (android.widget.TextView) findViewById(R.id.tvGuardaDatos);
+        textView = (android.widget.TextView) findViewById(R.id.textView);
+
         guardar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
 
@@ -47,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 String carrera = etCarrera.getText().toString();
                 String materia = etMateria.getText().toString();
 
-                System.out.println("El nombre es: "+nombre+"\nLa escuela es: "+escuela+"\nLa carrera es: "+carrera+"\nLa materia es: "+materia);
+                tvGuardaDatos.setVisibility(View.VISIBLE);
+
+                textView.setText("El nombre es: "+nombre+"\nLa escuela es: "+escuela+"\nLa carrera es: "+carrera+"\nLa materia es: "+materia);
             }
         });
 
