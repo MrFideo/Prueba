@@ -48,6 +48,11 @@ public class MainActivity extends AppCompatActivity {
                 String materia = etMateria.getText().toString();
 
                 System.out.println("El nombre es: "+nombre+"\nLa escuela es: "+escuela+"\nLa carrera es: "+carrera+"\nLa materia es: "+materia);
+                System.out.println("");
+                System.out.println("");
+                System.out.println("");
+                System.out.println("");
+                System.out.println("");
             }
         });
 
